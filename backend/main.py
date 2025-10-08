@@ -399,7 +399,7 @@ def ensure_token_valid(session):
     Ensure the access token is valid, refresh if needed
     """
     if session.get("expires_at", 0) > time.time() + 30:
-        return  # still valid
+        return session  # still valid
     
     # expired or about to
     if session.get("refresh_token"):
@@ -420,7 +420,7 @@ def ensure_token_valid(session):
                 session["expires_at"] = time.time() + int(resp.get("expires_in", 3600))
                 session["last_accessed"] = time.time()
                 logger.info("Token refresh successful")
-                return
+                return session
             else:
                 logger.error(f"Token refresh failed: {resp}")
                 raise Exception("Token refresh failed - no access_token in response")
