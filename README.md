@@ -2,6 +2,9 @@
 
 A comprehensive medical dashboard demonstrating SMART on FHIR integration with EHR systems. Built with FastAPI backend and Next.js frontend, featuring patient-specific health data visualization and OAuth2 authentication.
 
+<img width="1152" height="601" alt="Screenshot 2025-10-07 at 11 40 22 PM" src="https://github.com/user-attachments/assets/0ef826e7-bb05-4799-9750-743a3fe77af4" />
+<img width="1188" height="667" alt="Screenshot 2025-10-07 at 11 39 56 PM" src="https://github.com/user-attachments/assets/0686e99d-fa1d-4b26-9bd1-37195cb0e8fe" />
+
 ## ✨ Features
 
 - **SMART on FHIR Integration** - Complete OAuth2 Authorization Code flow
