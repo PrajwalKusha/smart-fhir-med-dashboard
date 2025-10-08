@@ -172,7 +172,8 @@ async def launch_app(request: Request):
             "redirect_uri": "http://localhost:9001/callback",
             "scope": "openid fhirUser patient/*.read",
             "launch": launch,
-            "state": session_id
+            "state": session_id,
+            "aud": iss  # Required for SMART on FHIR - audience parameter
         }
         
         redirect_url = auth_url + "?" + urllib.parse.urlencode(auth_params)
@@ -221,7 +222,8 @@ async def oauth_callback(code: str = None, state: str = None, error: str = None)
             "grant_type": "authorization_code",
             "code": code,
             "redirect_uri": session["redirect_uri"],
-            "client_id": session["client_id"]
+            "client_id": session["client_id"],
+            "aud": session["fhir_base"]  # Required for SMART on FHIR - audience parameter
             # Include client_secret if your client is confidential
             # "client_secret": session.get("client_secret")
         }
