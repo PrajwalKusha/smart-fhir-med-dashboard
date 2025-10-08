@@ -60,7 +60,7 @@ healthcare-app/
 
 ## 🔐 SMART on FHIR Setup
 
-1. **Visit SMART App Launcher**: https://launcher.smarthealthit.org/
+1. **Visit SMART App Launcher**: https://launch.smarthealthit.org/
 2. **Configure your app**:
    - Launch URL: `http://localhost:9001/launch`
    - Redirect URI: `http://localhost:9001/callback`
