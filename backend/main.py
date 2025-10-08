@@ -146,7 +146,7 @@ async def launch_app(request: Request):
             
             # Launch context
             "launch": launch,
-            "client_id": "your-client-id",  # Will be configured via SMART Health IT Sandbox
+            "client_id": "my_web_app",  # SMART Health IT Sandbox client ID
             "redirect_uri": "http://localhost:9001/callback",
             "scope": "openid fhirUser patient/*.read",
             
@@ -168,7 +168,7 @@ async def launch_app(request: Request):
         # 3) Build authorize URL with state = session_id
         auth_params = {
             "response_type": "code",
-            "client_id": "your-client-id",  # Will be configured via SMART Health IT Sandbox
+            "client_id": "my_web_app",  # SMART Health IT Sandbox client ID
             "redirect_uri": "http://localhost:9001/callback",
             "scope": "openid fhirUser patient/*.read",
             "launch": launch,
